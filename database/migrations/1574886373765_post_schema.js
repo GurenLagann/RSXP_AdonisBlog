@@ -7,13 +7,13 @@ class PostSchema extends Schema {
     this.create('posts', (table) => {
       table.increments()
       table
-        .interger('user_id')
+        .integer('user_id')
         .references('id')
         .inTable('users')
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
       table.text('title')
-      table.text('content')
+      table.text('contents')
       table.timestamps()
     })
   }
